@@ -1,0 +1,19 @@
+/webshop/.htaccess
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/public_html/
+RewriteRule (.*) /public_html/$1
+
+
+
+/webshop/public_html/.htaccess
+
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
