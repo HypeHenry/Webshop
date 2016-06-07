@@ -1,4 +1,0 @@
-winkelmandje
-betalen/check-out
-contact
-dashboard
